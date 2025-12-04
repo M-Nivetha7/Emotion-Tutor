@@ -28,23 +28,25 @@ Emotion Tutor is an interactive learning app that helps users recognize, underst
 
 ## 🛠️ Tech Stack
 
+```
 - Python / Flask or Django (backend)
 - HTML, CSS, JavaScript (frontend)
 - Any ML / sentiment model you integrate
+```
 
 ---
 
 ## 📦 Getting Started
 
+```
 git clone https://github.com/your-username/emotion-tutor.git
 cd emotion-tutor
 python3 app.py
-
-text
+```
 
 ---
 
-
+```
 # 1. Open terminal and go to the project folder
 cd emotion-tutor
 
@@ -53,6 +55,7 @@ npm install
 
 # 3. Start the development server
 npm run dev
+```
 
 
 ---
