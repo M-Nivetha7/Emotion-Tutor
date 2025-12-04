@@ -44,6 +44,19 @@ text
 
 ---
 
+
+# 1. Open terminal and go to the project folder
+cd emotion-tutor
+
+# 2. Install all dependencies (only needed the first time)
+npm install
+
+# 3. Start the development server
+npm run dev
+
+
+---
+
 ## 🤝 Contributing
 
 Pull requests are welcome! Open an issue for feature ideas or bugs.
