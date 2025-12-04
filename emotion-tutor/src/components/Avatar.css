@@ -1,0 +1,70 @@
+.face {
+  width: 140px; height: 140px; border-radius: 50%;
+  position: relative; margin-bottom: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: background 300ms ease, transform 300ms ease;
+}
+
+.face.neutral { background: #3b3b3b; }
+.face.calm { background: #1e3a8a; }          /* deep blue */
+.face.focus { background: #0b1020; }         /* near-black */
+.face.motivation { background: linear-gradient(135deg,#a855f7,#f59e0b); }
+
+.eye {
+  width: 14px; height: 14px; border-radius: 50%;
+  background: #fff; position: absolute; top: 48px;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.2) inset;
+}
+.eye.left { left: 42px; }
+.eye.right { right: 42px; }
+
+.brows { position: absolute; left: 28px; right: 28px; top: 34px; height: 6px; }
+.brows.neutral { background: transparent; }
+.brows.up { background: linear-gradient(#fff,#fff) center/60% 2px no-repeat; transform: translateY(-4px); }
+.brows.down { background: linear-gradient(#fff,#fff) center/60% 2px no-repeat; transform: translateY(2px) rotate(3deg); }
+
+.mouth {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  bottom: 38px; width: 46px; height: 22px;
+  background: #fff; border-radius: 0 0 40px 40px;
+  clip-path: inset(10px 0 0 0 round 40px);
+}
+.mouth.neutral { width: 34px; height: 10px; border-radius: 6px; clip-path: none; }
+.mouth.flat { width: 38px; height: 4px; border-radius: 2px; clip-path: none; }
+.mouth.smile { width: 46px; height: 20px; }
+.mouth.big-smile { width: 58px; height: 26px; }
+@keyframes avatar-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.face {
+  /* keep your existing face styles */
+  transition: background 0.3s ease;
+}
+
+/* this class will trigger the pop */
+.face.pop {
+  animation: avatar-pop 220ms ease-out;
+}
+.hero-row {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;           /* vertically center avatar and controls */
+  justify-content: center;       /* center them inside the card */
+  gap: 2.5rem;                   /* space between avatar and controls */
+  flex-wrap: wrap;               /* stack on small screens */
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Optional: move controls a bit up relative to avatar */
+.controls {
+  margin-top: 0.5rem;
+}
+
